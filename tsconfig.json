@@ -2,10 +2,12 @@
   "compilerOptions": {
     "target": "ESNext",
     "jsx": "preserve",
+    "useDefineForClassFields": true,
+    "sourceMap": true,
     "lib": ["DOM", "ESNext"],
     "baseUrl": ".",
     "module": "ESNext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "Node",
     "paths": {
       "@/*": ["src/*"]
     },
@@ -15,16 +17,15 @@
     ],
     "allowJs": true,
     "strict": true,
-    "strictNullChecks": true,
-    "noUnusedLocals": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "skipLibCheck": true
   },
   "include": [
-    "./src/typed-router.d.ts"
+    "./src/typed-router.d.ts",
+    "src/**/*.ts",
+    "src/**/*.vue",
+    "vite.config.mts"
   ],
-  "exclude": ["dist", "node_modules", "cypress"],
-  "references": [{ "path": "./tsconfig.node.json" }],
+  "exclude": ["dist", "node_modules", "cypress"]
 }

@@ -67,8 +67,8 @@
 import io from 'socket.io-client'
 import {useRoute, useRouter} from "vue-router";
 import {onMounted, ref} from "vue";
-import {formatTime} from "../../helpers";
-import {getRoomTitle} from "../../api/room";
+import {formatTime} from "@/helpers";
+import {getRoomTitle} from "@/api/room";
 
 const router = useRouter()
 
